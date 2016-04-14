@@ -1,0 +1,49 @@
+﻿@model IEnumerable<LinqXml.Data.Kurlar>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MeetingType)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model=> model.CallDate)
+        </th>
+         <th>
+            @Html.DisplayNameFor(model=> model.DurationInHours)
+        </th>
+         <th>
+            @Html.DisplayNameFor(model=> model.Contacts)
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MeetingType)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CallDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DurationInHours)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Contacts)
+        </td>
+       
+    </tr>
+}
+
+</table>
